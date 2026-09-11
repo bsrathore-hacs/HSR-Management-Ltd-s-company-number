@@ -1,40 +1,432 @@
 <!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Refurbishment &amp; Conversion — HSR Management</title>
-  <link rel="stylesheet" href="../styles.css">
+  <title>HSR Management — Home</title>
+  <meta name="description" content="HSR Management - Construction, refurbishment and project management specialists.">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root{
+      --accent:#0b5;
+      --dark:#1a1a1a;
+      --muted:#666;
+      --bg:#f7f7f7;
+      --card-bg:#fff;
+      --max-width:1100px;
+      --radius:6px;
+      --shadow:0 4px 18px rgba(10,10,10,0.06);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .site-header{
+      background:#fff;
+      border-bottom:1px solid #e9e9e9;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+    .wrap{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:var(--dark);
+    }
+    .brand h1{
+      font-size:18px;
+      margin:0;
+      letter-spacing:0.2px;
+    }
+    nav{
+      margin-top:8px;
+    }
+    nav ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      gap:18px;
+    }
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:14px;
+    }
+    .hero{
+      background:linear-gradient(90deg, rgba(11,85,85,0.06), rgba(11,85,85,0.02));
+      padding:48px 0;
+      margin-bottom:24px;
+    }
+    .hero-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .hero h2{
+      margin:0 0 8px 0;
+      font-size:28px;
+    }
+    .hero p{
+      margin:0;
+      color:var(--muted);
+    }
+    .projects{
+      max-width:var(--max-width);
+      margin:0 auto 64px;
+      padding:0 20px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+    }
+    .project-card{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:block;
+      color:inherit;
+      text-decoration:none;
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+    .project-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 14px 30px rgba(10,10,10,0.08);
+    }
+    .project-card-inner{
+      padding:14px;
+    }
+    .project-card img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      display:block;
+    }
+    .project-card h3{
+      margin:12px 0 6px 0;
+      font-size:16px;
+    }
+    .project-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    footer{
+      background:#fff;
+      border-top:1px solid #e9e9e9;
+      padding:18px 20px;
+      color:var(--muted);
+      text-align:center;
+    }
+    @media (max-width:640px){
+      .hero-inner{flex-direction:column; align-items:flex-start;}
+      .hero h2{font-size:22px;}
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSR Management Ltd | Property, Development & Management Solutions</title>
+  <meta name="description" content="HSR Management Ltd provides property management, development, construction coordination, consultancy and investment support across the UK." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a href="../" class="logo">HSR Management</a>
-      <nav class="site-nav">
-        <a href="../">Home</a>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="HSR Management" width="44" height="44" style="display:block;">
+        <div>
+          <h1>HSR Management</h1>
+          <div style="font-size:12px;color:var(--muted);">Construction & Project Management</div>
+        </div>
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <span class="brand-mark">HSR</span>
+        <span class="brand-text">Management Ltd</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact Us</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1>Refurbishment &amp; Conversion</h1>
-    <p class="intro">Selected refurbishment and conversion projects by HSR Management Ltd.</p>
-
-    <section class="project-gallery" aria-label="Refurbishment & Conversion project photos">
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="../images/1150.jpg" alt="Refurbishment & Conversion project photo">
-        </figure>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">PROPERTY • DEVELOPMENT • MANAGEMENT</p>
+        <h1>HSR Management Ltd</h1>
+        <p class="hero-copy">
+          HSR Management Ltd delivers practical, commercially focused solutions across property management,
+          development, construction coordination, consultancy and investment support.
+        </p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">Explore Our Services</a>
+          <a href="#contact" class="btn btn-secondary">Speak With Us</a>
+        </div>
       </div>
+    </section>
 
-      <p><a href="../index.html" class="back-link">Back to home</a></p>
+    <section id="about" class="section section-light">
+      <div class="container split">
+        <div>
+          <h2>Delivering projects on time, every time</h2>
+          <p>Specialists in construction, refurbishment and fit-out projects across commercial and residential sectors.</p>
+          <p class="section-kicker">ABOUT HSR MANAGEMENT LTD</p>
+          <h2>Built around property expertise and practical delivery</h2>
+        </div>
+        <div style="text-align:right;">
+          <a href="projects.html" style="display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600;">View all projects</a>
+        <div class="about-copy">
+          <p>
+            HSR Management Ltd supports property owners, investors and businesses with a hands-on approach
+            to property management, development and project delivery.
+          </p>
+          <p>
+            From identifying opportunities and coordinating works through to managing assets and supporting
+            planning or commercial decisions, our focus is on clear communication, efficient execution and
+            long-term value.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" aria-label="Featured projects">
+      <h2 style="margin:0 0 12px 0; padding:0 20px;">Featured projects</h2>
+      <div class="grid">
+        <!-- New Build project card (unchanged) -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <img src="images/new-build.jpg" alt="New Build">
+            <h3>New Build</h3>
+            <p>Delivering high-quality new build developments from concept to completion.</p>
+          </div>
+    <section id="services" class="section section-dark">
+      <div class="container">
+        <p class="section-kicker light">OUR SERVICES</p>
+        <h2 class="light">Integrated property and development support</h2>
+        <div class="service-grid">
+          <article class="card">
+            <div class="icon">01</div>
+            <h3>Property Management</h3>
+            <p>Day-to-day property oversight, tenant coordination, maintenance planning and asset management support.</p>
+          </article>
+          <article class="card">
+            <div class="icon">02</div>
+            <h3>Property Development</h3>
+            <p>Support from early-stage opportunity assessment through design, delivery, refurbishment and completion.</p>
+          </article>
+          <article class="card">
+            <div class="icon">03</div>
+            <h3>Construction Coordination</h3>
+            <p>Coordination of contractors, trades, programmes, procurement and project requirements.</p>
+          </article>
+          <article class="card">
+            <div class="icon">04</div>
+            <h3>Planning &amp; Consultancy</h3>
+            <p>Commercially focused support around planning strategy, development potential and project feasibility.</p>
+          </article>
+          <article class="card">
+            <div class="icon">05</div>
+            <h3>Investment Support</h3>
+            <p>Property opportunity review, development appraisal and practical support for investors and partners.</p>
+          </article>
+          <article class="card">
+            <div class="icon">06</div>
+            <h3>Asset Improvement</h3>
+            <p>Refurbishment, repositioning and improvement strategies designed to protect and enhance property value.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+        <!-- Refurbishment & Conversion project card (wrapped in anchor to make entire card clickable) -->
+        <a class="project-card" href="projects/refurbishment-conversion.html" title="Refurbishment & Conversion">
+          <div class="project-card-inner">
+            <img src="images/refurbishment-conversion.jpg" alt="Refurbishment & Conversion">
+            <h3>Refurbishment & Conversion</h3>
+            <p>Short description of the project...</p>
+          </div>
+        </a>
+
+        <!-- Fit-Out project card (unchanged) -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <img src="images/fit-out.jpg" alt="Fit-Out">
+            <h3>Fit-Out</h3>
+            <p>Bespoke interior fit-out solutions tailored to client needs and brand identity.</p>
+    <section id="projects" class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">PROJECTS &amp; PORTFOLIO</p>
+            <h2>Practical experience across a range of property projects</h2>
+          </div>
+          <p>
+            We work across residential, mixed-use and commercial property, with a focus on unlocking potential,
+            improving assets and delivering projects efficiently.
+          </p>
+        </div>
+
+        <!-- Sustainable Design project card (unchanged) -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <img src="images/sustainable-design.jpg" alt="Sustainable Design">
+            <h3>Sustainable Design</h3>
+            <p>Integrating sustainable practices to reduce environmental impact and running costs.</p>
+        <div class="project-grid">
+          <div class="project project-one">
+            <img src="images/1113.jpg" alt="Project - Refurbishment & Conversion" class="project-image" />
+            <div class="project-content">
+              <span>Residential</span>
+              <h3>Refurbishment &amp; Conversion</h3>
+            </div>
+          </div>
+          <div class="project project-two">
+            <div class="project-content">
+              <span>Development</span>
+              <h3>Planning &amp; Project Delivery</h3>
+            </div>
+          </div>
+          <div class="project project-three">
+            <div class="project-content">
+              <span>Commercial</span>
+              <h3>Asset Management &amp; Improvement</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Project Management project card (unchanged) -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <img src="images/project-management.jpg" alt="Project Management">
+            <h3>Project Management</h3>
+            <p>Comprehensive project and site management to ensure programmes and budgets are met.</p>
+          </div>
+    <section class="cta-strip">
+      <div class="container cta-wrap">
+        <div>
+          <p class="section-kicker light">LET'S TALK</p>
+          <h2 class="light">Have a property or development project in mind?</h2>
+        </div>
+        <a href="#contact" class="btn btn-white">Contact HSR Management</a>
+      </div>
+    </section>
+
+        <!-- Interiors project card (unchanged) -->
+        <div class="project-card">
+          <div class="project-card-inner">
+            <img src="images/interiors.jpg" alt="Interiors">
+            <h3>Interiors</h3>
+            <p>Creative interior solutions that combine functionality with quality finishes.</p>
+    <section id="contact" class="section section-contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="section-kicker">CONTACT US</p>
+          <h2>Start a conversation</h2>
+          <p class="contact-intro">
+            Tell us about your property, development or management requirement and we will be happy to discuss how we can help.
+          </p>
+          <div class="contact-details">
+            <p><strong>HSR Management Ltd</strong></p>
+            <p>20 Wenlock Road<br>London<br>N1 7GU<br>United Kingdom</p>
+            <p>Phone: <a href="tel:+447932616191">07932 616191</a></p>
+          </div>
+        </div>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you. Connect this form to your preferred email service when the domain is live.');">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" placeholder="+44..." />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" placeholder="Tell us about your project"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Send Enquiry</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; HSR Management</p>
+  <footer>
+    <div class="wrap">
+      <small>© <span id="year"></span> HSR Management. All rights reserved.</small>
+    <div class="container footer-wrap">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-mark">HSR</span>
+          <span class="brand-text">Management Ltd</span>
+        </div>
+        <p>Property, Development &amp; Management Solutions.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="copyright">© 2026 HSR Management Ltd. All rights reserved.</p>
     </div>
   </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/447704501328?text=Hi%2C%20I%27m%20contacting%20HSR%20Management%20through%20your%20website." target="_blank" rel="noopener noreferrer" aria-label="Chat with HSR Management on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d="M19.11 17.21c-.26-.13-1.52-.75-1.75-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.08-.4-2.06-1.27-.76-.68-1.28-1.52-1.43-1.78-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.5-.43-.43-.58-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.18s.93 2.53 1.06 2.7c.13.17 1.84 2.81 4.46 3.94.62.27 1.11.43 1.49.55.63.2 1.2.17 1.65.1.5-.07 1.52-.62 1.74-1.22.22-.6.22-1.11.15-1.22-.06-.11-.24-.17-.5-.30z"/>
+      <path d="M16.02 3.2c-7.08 0-12.82 5.72-12.82 12.78 0 2.25.59 4.44 1.7 6.37L3.1 28.8l6.62-1.74a12.83 12.83 0 0 0 6.29 1.6h.01c7.08 0 12.82-5.72 12.82-12.78S23.1 3.2 16.02 3.2zm0 23.3h-.01a10.64 10.64 0 0 1-5.43-1.49l-.39-.23-3.93 1.03 1.05-3.82-.25-.39a10.57 10.57 0 0 1-1.64-5.66c0-5.84 4.77-10.59 10.63-10.59 2.84 0 5.5 1.1 7.5 3.1a10.5 10.5 0 0 1 3.12 7.49c0 5.84-4.77 10.59-10.65 10.59z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+    document.querySelectorAll('.main-nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+  </script>
 </body>
+</html>
 </html>
