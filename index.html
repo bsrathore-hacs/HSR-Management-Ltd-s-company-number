@@ -1,145 +1,6 @@
-<!doctype html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HSR Management — Home</title>
-  <meta name="description" content="HSR Management - Construction, refurbishment and project management specialists.">
-  <link rel="icon" href="favicon.ico">
-  <style>
-    :root{
-      --accent:#0b5;
-      --dark:#1a1a1a;
-      --muted:#666;
-      --bg:#f7f7f7;
-      --card-bg:#fff;
-      --max-width:1100px;
-      --radius:6px;
-      --shadow:0 4px 18px rgba(10,10,10,0.06);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
-    }
-    html,body{height:100%;}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--dark);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    .site-header{
-      background:#fff;
-      border-bottom:1px solid #e9e9e9;
-      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
-      position:sticky;
-      top:0;
-      z-index:100;
-    }
-    .wrap{
-      max-width:var(--max-width);
-      margin:0 auto;
-      padding:20px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      text-decoration:none;
-      color:var(--dark);
-    }
-    .brand h1{
-      font-size:18px;
-      margin:0;
-      letter-spacing:0.2px;
-    }
-    nav{
-      margin-top:8px;
-    }
-    nav ul{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:flex;
-      gap:18px;
-    }
-    nav a{
-      color:var(--muted);
-      text-decoration:none;
-      font-size:14px;
-    }
-    .hero{
-      background:linear-gradient(90deg, rgba(11,85,85,0.06), rgba(11,85,85,0.02));
-      padding:48px 0;
-      margin-bottom:24px;
-    }
-    .hero-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-    .hero h2{
-      margin:0 0 8px 0;
-      font-size:28px;
-    }
-    .hero p{
-      margin:0;
-      color:var(--muted);
-    }
-    .projects{
-      max-width:var(--max-width);
-      margin:0 auto 64px;
-      padding:0 20px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:18px;
-    }
-    .project-card{
-      background:var(--card-bg);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      display:block;
-      color:inherit;
-      text-decoration:none;
-      transition:transform .18s ease,box-shadow .18s ease;
-    }
-    .project-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 14px 30px rgba(10,10,10,0.08);
-    }
-    .project-card-inner{
-      padding:14px;
-    }
-    .project-card img{
-      width:100%;
-      height:160px;
-      object-fit:cover;
-      display:block;
-    }
-    .project-card h3{
-      margin:12px 0 6px 0;
-      font-size:16px;
-    }
-    .project-card p{
-      margin:0;
-      color:var(--muted);
-      font-size:14px;
-    }
-    footer{
-      background:#fff;
-      border-top:1px solid #e9e9e9;
-      padding:18px 20px;
-      color:var(--muted);
-      text-align:center;
-    }
-    @media (max-width:640px){
-      .hero-inner{flex-direction:column; align-items:flex-start;}
-      .hero h2{font-size:22px;}
-    }
-  </style>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HSR Management Ltd | Property, Development & Management Solutions</title>
@@ -151,24 +12,11 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
-      <a href="index.html" class="brand">
-        <img src="images/logo.svg" alt="HSR Management" width="44" height="44" style="display:block;">
-        <div>
-          <h1>HSR Management</h1>
-          <div style="font-size:12px;color:var(--muted);">Construction & Project Management</div>
-        </div>
     <div class="container nav-wrap">
       <a href="#home" class="brand">
         <span class="brand-mark">HSR</span>
         <span class="brand-text">Management Ltd</span>
       </a>
-      <nav>
-        <ul>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
       <button class="menu-toggle" aria-label="Open menu">☰</button>
       <nav class="main-nav">
         <a href="#home">Home</a>
@@ -181,8 +29,6 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap hero-inner">
     <section id="home" class="hero">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -202,13 +48,9 @@
     <section id="about" class="section section-light">
       <div class="container split">
         <div>
-          <h2>Delivering projects on time, every time</h2>
-          <p>Specialists in construction, refurbishment and fit-out projects across commercial and residential sectors.</p>
           <p class="section-kicker">ABOUT HSR MANAGEMENT LTD</p>
           <h2>Built around property expertise and practical delivery</h2>
         </div>
-        <div style="text-align:right;">
-          <a href="projects.html" style="display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600;">View all projects</a>
         <div class="about-copy">
           <p>
             HSR Management Ltd supports property owners, investors and businesses with a hands-on approach
@@ -223,16 +65,6 @@
       </div>
     </section>
 
-    <section class="projects" aria-label="Featured projects">
-      <h2 style="margin:0 0 12px 0; padding:0 20px;">Featured projects</h2>
-      <div class="grid">
-        <!-- New Build project card (unchanged) -->
-        <div class="project-card">
-          <div class="project-card-inner">
-            <img src="images/new-build.jpg" alt="New Build">
-            <h3>New Build</h3>
-            <p>Delivering high-quality new build developments from concept to completion.</p>
-          </div>
     <section id="services" class="section section-dark">
       <div class="container">
         <p class="section-kicker light">OUR SERVICES</p>
@@ -272,21 +104,6 @@
       </div>
     </section>
 
-        <!-- Refurbishment & Conversion project card (wrapped in anchor to make entire card clickable) -->
-        <a class="project-card" href="projects/refurbishment-conversion.html" title="Refurbishment & Conversion">
-          <div class="project-card-inner">
-            <img src="images/refurbishment-conversion.jpg" alt="Refurbishment & Conversion">
-            <h3>Refurbishment & Conversion</h3>
-            <p>Short description of the project...</p>
-          </div>
-        </a>
-
-        <!-- Fit-Out project card (unchanged) -->
-        <div class="project-card">
-          <div class="project-card-inner">
-            <img src="images/fit-out.jpg" alt="Fit-Out">
-            <h3>Fit-Out</h3>
-            <p>Bespoke interior fit-out solutions tailored to client needs and brand identity.</p>
     <section id="projects" class="section section-light">
       <div class="container">
         <div class="section-heading">
@@ -299,21 +116,14 @@
             improving assets and delivering projects efficiently.
           </p>
         </div>
-
-        <!-- Sustainable Design project card (unchanged) -->
-        <div class="project-card">
-          <div class="project-card-inner">
-            <img src="images/sustainable-design.jpg" alt="Sustainable Design">
-            <h3>Sustainable Design</h3>
-            <p>Integrating sustainable practices to reduce environmental impact and running costs.</p>
         <div class="project-grid">
-          <div class="project project-one">
+          <a href="projects/refurbishment-conversion.html" class="project project-one" style="text-decoration:none; color:inherit;">
             <img src="images/1113.jpg" alt="Project - Refurbishment & Conversion" class="project-image" />
             <div class="project-content">
               <span>Residential</span>
               <h3>Refurbishment &amp; Conversion</h3>
             </div>
-          </div>
+          </a>
           <div class="project project-two">
             <div class="project-content">
               <span>Development</span>
@@ -330,13 +140,6 @@
       </div>
     </section>
 
-        <!-- Project Management project card (unchanged) -->
-        <div class="project-card">
-          <div class="project-card-inner">
-            <img src="images/project-management.jpg" alt="Project Management">
-            <h3>Project Management</h3>
-            <p>Comprehensive project and site management to ensure programmes and budgets are met.</p>
-          </div>
     <section class="cta-strip">
       <div class="container cta-wrap">
         <div>
@@ -347,12 +150,6 @@
       </div>
     </section>
 
-        <!-- Interiors project card (unchanged) -->
-        <div class="project-card">
-          <div class="project-card-inner">
-            <img src="images/interiors.jpg" alt="Interiors">
-            <h3>Interiors</h3>
-            <p>Creative interior solutions that combine functionality with quality finishes.</p>
     <section id="contact" class="section section-contact">
       <div class="container contact-grid">
         <div>
@@ -391,8 +188,6 @@
   </main>
 
   <footer>
-    <div class="wrap">
-      <small>© <span id="year"></span> HSR Management. All rights reserved.</small>
     <div class="container footer-wrap">
       <div>
         <div class="brand footer-brand">
@@ -420,13 +215,10 @@
   </a>
 
   <script>
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('.main-nav');
     toggle.addEventListener('click', () => nav.classList.toggle('open'));
     document.querySelectorAll('.main-nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
   </script>
 </body>
-</html>
 </html>
